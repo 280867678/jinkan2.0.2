@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_bg_dialog_parse" android:paddingTop="13dp" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="300dp">
+        <RelativeLayout android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="25dp" android:layout_marginBottom="13dp">
+            <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/green" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_dialog_title" android:paddingLeft="20dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="嗅探中" android:maxLines="1" android:layout_centerVertical="true" android:fontFamily="sans-serif-thin"/>
+            <ImageView android:id="@+id/iv_dialog_close" android:padding="3dp" android:layout_width="50dp" android:layout_height="25dp" android:src="@drawable/ic_web_close" android:layout_alignParentRight="true"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llyt_quick_sniff" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_toLeftOf="@+id/iv_dialog_close" android:layout_centerVertical="true">
+                <ImageView android:id="@+id/iv_quick_sniff" android:layout_width="25dp" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:src="@drawable/switch_open"/>
+                <TextView android:textSize="15sp" android:textColor="@color/text_black" android:id="@+id/tv_quick_sniff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="极速嗅探" android:layout_centerVertical="true"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_progress" android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp" android:paddingBottom="5dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/llyt_pc_play" android:paddingLeft="20dp" android:paddingTop="3dp" android:paddingRight="20dp" android:paddingBottom="5dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <TextView android:textSize="15sp" android:gravity="center" android:id="@+id/tv_ip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="播放地址:"/>
+            <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginTop="10dp"/>
+            <TextView android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/pc_play"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/flyt_banner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp"/>
+    </LinearLayout>
+    <View android:id="@+id/view_bottom" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="10dp"/>
+</LinearLayout>

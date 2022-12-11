@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bg_corner_white_corner3" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+    <LinearLayout android:orientation="vertical" android:id="@+id/llyt_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <TextView android:textSize="18sp" android:textColor="@color/text_black2" android:id="@+id/tv_title" android:paddingLeft="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="悬浮窗播放" android:maxLines="1"/>
+            <EditText android:id="@+id/et_url" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:layout_marginRight="15dp" android:hint="输入视频直链小窗播放" android:singleLine="true"/>
+        </LinearLayout>
+        <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="45dp" android:layout_alignParentBottom="true">
+            <TextView android:textSize="16sp" android:textColor="@color/text_black2" android:gravity="center" android:id="@+id/tv_cancel" android:layout_width="0dp" android:layout_height="match_parent" android:text="粘贴地址" android:layout_weight="1"/>
+            <View android:background="@color/line_color" android:layout_width="1dp" android:layout_height="match_parent"/>
+            <TextView android:textSize="16sp" android:textColor="@color/colorPrimary" android:gravity="center" android:id="@+id/tv_ok" android:layout_width="0dp" android:layout_height="match_parent" android:text="播放" android:layout_weight="1"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/flyt_banner" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="0.1dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="200dp" android:width="200dp" android:viewportWidth="1024" android:viewportHeight="1024">
+    <path android:fillColor="@color/eoisode_player_sel" android:pathData="M151.1,971c-36.4,0 -65.9,-29.5 -65.9,-65.9V366.9c0,-36.4 29.5,-65.9 65.9,-65.9 36.4,0 65.9,29.5 65.9,65.9v538.2c0,36.4 -29.5,65.9 -65.9,65.9zM512,971c-36.4,0 -65.9,-29.5 -65.9,-65.9V118.9c0,-36.4 29.5,-65.9 65.9,-65.9 36.4,0 65.9,29.5 65.9,65.9v786.2c0,36.4 -29.5,65.9 -65.9,65.9zM872.9,971c-36.4,0 -65.9,-29.5 -65.9,-65.9V604.9c0,-36.4 29.5,-65.9 65.9,-65.9 36.4,0 65.9,29.5 65.9,65.9v300.2c0,36.4 -29.5,65.9 -65.9,65.9z"/>
+</vector>

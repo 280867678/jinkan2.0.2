@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/coordinatorLayout" android:background="@color/background" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="@dimen/tool_bar_height">
+        <com.androidkun.xtablayout.XTabLayout android:id="@+id/tablayout" android:background="@color/background" android:paddingBottom="1dp" android:layout_width="0dp" android:layout_height="35dp" android:layout_marginLeft="5dp" android:layout_marginRight="10dp" android:layout_weight="1" app:xTabDividerWidthWidthText="false" app:xTabIndicatorColor="@color/colorPrimary" app:xTabIndicatorHeight="2dp" app:xTabIndicatorWidth="20dp" app:xTabSelectedTextColor="@color/colorPrimary" app:xTabSelectedTextSize="17sp" app:xTabTextColor="@color/text_gray" app:xTabTextSize="17sp"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llyt_reward" android:background="@drawable/bg_index_reward_frame" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_marginRight="20dp" android:layout_marginBottom="3dp">
+            <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/ic_menu_reward"/>
+            <TextView android:textSize="13sp" android:textColor="@color/red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="免广告"/>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/viewpager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

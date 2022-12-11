@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@+id/pbar" android:visibility="visible" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="-7dp" android:indeterminate="false" android:indeterminateDrawable="@drawable/loading"/>
+        <TextView android:textSize="14sp" android:textColor="@color/text_black" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_title" android:background="@color/white" android:paddingTop="13dp" android:paddingBottom="13dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="这里是标题" android:maxLines="2" android:layout_weight="1"/>
+    </LinearLayout>
+    <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp"/>
+</LinearLayout>

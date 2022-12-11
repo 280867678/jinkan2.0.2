@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="#fbfbfb" android:paddingLeft="13dp" android:paddingRight="13dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="12sp" android:textColor="@color/red" android:paddingTop="10dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="※ 非编辑状态点击每一项可直接跳转显示"/>
+    <RelativeLayout android:gravity="center_vertical" android:id="@+id/tab" android:layout_width="match_parent" android:layout_height="35dp">
+        <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/text_black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="拖拽排序点击删除"/>
+        <TextView android:textSize="16sp" android:textColor="@android:color/holo_red_dark" android:gravity="center" android:id="@+id/drag_finish_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/icon_delete" android:text="完成" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <me.tvspark.widget.easytagdragview.widget.DragDropGirdView android:id="@+id/tagdrag_view" android:fadingEdge="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:horizontalSpacing="12dp" android:verticalSpacing="10dp" android:numColumns="4" android:divider="@null" android:nestedScrollingEnabled="true" app:fixed_type="true"/>
+        <RelativeLayout android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="23dp" android:layout_below="@+id/tagdrag_view">
+            <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/text_black" android:id="@+id/more_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点击添加更多栏目"/>
+            <GridView android:id="@+id/add_gridview" android:scrollbars="none" android:fadingEdge="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="17dp" android:horizontalSpacing="12dp" android:verticalSpacing="10dp" android:numColumns="4" android:divider="@null" android:layout_below="@+id/more_tv" android:nestedScrollingEnabled="true"/>
+        </RelativeLayout>
+        <FrameLayout android:id="@+id/activity_overlay" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@+id/tile_drag_shadow_overlay" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no"/>
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@+id/frameLayout" android:background="@color/background" android:fitsSystemWindows="false" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/collapsing_toolbar" android:background="#f5f5f5" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="180dp" app:contentScrim="@drawable/shape_gallery_detail_top" app:layout_scrollFlags="0x3" app:titleEnabled="false">
+                <ImageView android:id="@+id/iv_cover_bg" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="180dp" android:src="@drawable/bg_place_holder_vertical" android:scaleType="centerCrop" app:layout_collapseMode="2" app:layout_collapseParallaxMultiplier="0.5"/>
+                <ImageView android:id="@+id/iv_cover_mask" android:background="@color/white" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="180dp" android:scaleType="centerCrop" app:layout_collapseMode="2" app:layout_collapseParallaxMultiplier="0.5"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginTop="85dp" android:layout_marginRight="25dp">
+                    <me.tvspark.widget.RoundImageView android:id="@+id/iv_color" android:layout_width="80dp" android:layout_height="80dp"/>
+                    <TextView android:textSize="15sp" android:textColor="@color/white" android:id="@+id/tv_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginTop="18dp" android:text="热播"/>
+                    <TextView android:textSize="15sp" android:textColor="@color/white" android:id="@+id/tv_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="榜单" android:layout_below="@+id/tv_1" android:layout_alignLeft="@+id/tv_1"/>
+                    <TextView android:textSize="22sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="5dp" android:text="标题" android:maxLines="1" android:layout_toRightOf="@+id/iv_color"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/white" android:id="@+id/tv_hot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="0" android:layout_below="@+id/tv_title" android:layout_alignLeft="@+id/tv_title"/>
+                </RelativeLayout>
+                <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/tool_bar_height" app:layout_collapseMode="1" app:theme="@style/ToolbarTheme" app:title="@string/app_name"/>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

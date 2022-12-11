@@ -1,0 +1,25 @@
+package androidx.constraintlayout.solver.widgets.analyzer;
+
+import androidx.constraintlayout.solver.widgets.analyzer.DependencyNode;
+
+/* loaded from: classes3.dex */
+public class DimensionDependency extends DependencyNode {
+    public int wrapValue;
+
+    public DimensionDependency(WidgetRun widgetRun) {
+        super(widgetRun);
+        this.type = widgetRun instanceof HorizontalWidgetRun ? DependencyNode.Type.HORIZONTAL_DIMENSION : DependencyNode.Type.VERTICAL_DIMENSION;
+    }
+
+    @Override // androidx.constraintlayout.solver.widgets.analyzer.DependencyNode
+    public void resolve(int i) {
+        if (this.resolved) {
+            return;
+        }
+        this.resolved = true;
+        this.value = i;
+        for (Dependency dependency : this.dependencies) {
+            dependency.update(dependency);
+        }
+    }
+}

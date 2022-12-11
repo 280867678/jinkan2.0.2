@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_black_corner_6" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ProgressBar android:layout_width="35dp" android:layout_height="35dp" android:indeterminateDuration="1200" style="@style/mProgress_circle"/>
+    <TextView android:textSize="10sp" android:textColor="#c6c6c6" android:id="@+id/tv_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="正在加载"/>
+</LinearLayout>

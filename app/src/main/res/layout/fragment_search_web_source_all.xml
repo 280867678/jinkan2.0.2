@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/llyt_all" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_channel" android:background="@drawable/bg_corner_left_live" android:paddingTop="3dp" android:paddingBottom="3dp" android:scrollbars="none" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="0.3"/>
+        <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_episode" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="65dp" layout="@layout/ing_retry"/>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="20dp">
+    <TextView android:textSize="12.5sp" android:textColor="@color/text_black" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_title" android:paddingLeft="1dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="豆瓣热剧" android:maxLines="1" android:layout_weight="1"/>
+    <TextView android:textSize="12.5sp" android:textColor="@color/text_black" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_go_web" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="【 去原网站搜索 】" android:maxLines="1"/>
+</LinearLayout>

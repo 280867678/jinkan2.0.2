@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/llyt_bar" android:background="@color/white" android:layout_width="match_parent" android:layout_height="45dp" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@+id/rlyt_web_back" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_web_back" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_web_back_gray" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlyt_web_forward" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_web_forward" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_web_forward_gray" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <View android:layout_width="75dp" android:layout_height="match_parent"/>
+        <RelativeLayout android:id="@+id/rlyt_web_refresh" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_web_refresh" android:layout_width="25dp" android:layout_height="25dp" android:layout_centerInParent="true" app:srcCompat="@drawable/ic_web_refresh"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlyt_web_close" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_web_close" android:layout_width="30dp" android:layout_height="30dp" android:layout_centerInParent="true" app:srcCompat="@drawable/ic_web_close"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/llyt_navigation" android:background="@color/white" android:layout_width="match_parent" android:layout_height="55dp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_bg_home_top_search" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:layout_weight="1">
+            <ImageView android:background="@drawable/ic_web_ico" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginLeft="12dp" android:layout_marginTop="1dp" android:layout_centerVertical="true"/>
+            <TextView android:textSize="14sp" android:textColor="@color/text_gray" android:ellipsize="end" android:id="@+id/tv_web_url" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="http://www.baidu.com" android:maxLines="1" android:layout_weight="1" android:layout_centerVertical="true"/>
+            <RelativeLayout android:id="@+id/rlyt_adb" android:visibility="gone" android:layout_width="30dp" android:layout_height="match_parent">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_centerInParent="true" app:srcCompat="@drawable/bg_adb"/>
+                <TextView android:textSize="9sp" android:textColor="@color/white" android:id="@+id/tv_adb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/flyt_content" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/llyt_bar" android:layout_below="@+id/llyt_navigation"/>
+</RelativeLayout>

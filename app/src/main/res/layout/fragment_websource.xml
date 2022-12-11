@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/coordinatorLayout" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/tool_bar_height">
+        <TextView android:textSize="19sp" android:textColor="@color/black" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="1dp" android:text="影库" android:layout_weight="1"/>
+        <RelativeLayout android:id="@+id/rlyt_search" android:background="@drawable/shape_bg_home_top_search" android:paddingLeft="16dp" android:paddingRight="15dp" android:layout_width="135dp" android:layout_height="29dp" android:layout_marginTop="1dp" android:layout_marginRight="10dp">
+            <ImageView android:background="@drawable/icon_search2" android:layout_width="18dp" android:layout_height="18dp" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <TextView android:textSize="14sp" android:textColor="@color/color_bd_bd_bd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="站源内搜索" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <com.androidkun.xtablayout.XTabLayout android:id="@+id/tablayout" android:background="@color/background" android:paddingBottom="1dp" android:layout_width="130dp" android:layout_height="35dp" android:layout_marginRight="4dp" app:xTabDividerWidthWidthText="false" app:xTabIndicatorColor="@color/colorPrimary" app:xTabIndicatorHeight="2dp" app:xTabIndicatorWidth="20dp" app:xTabSelectedTextColor="@color/colorPrimary" app:xTabSelectedTextSize="15sp" app:xTabTextColor="@color/text_gray" app:xTabTextSelectedBold="true" app:xTabTextSize="14sp"/>
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/viewpager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

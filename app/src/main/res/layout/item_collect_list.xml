@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <me.tvspark.widget.RoundImageView android:id="@+id/iv_gallery" android:layout_width="75dp" android:layout_height="100dp" android:layout_marginTop="10dp" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+        <TextView android:textSize="17sp" android:textColor="@color/black" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:layout_marginRight="5dp" android:text="清新养眼" android:maxLines="2" android:layout_toRightOf="@+id/iv_gallery"/>
+        <TextView android:textSize="9.5sp" android:textColor="@color/colorPrimary" android:id="@+id/tv_type" android:paddingTop="2dp" android:paddingBottom="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:text="电视剧" android:layout_toRightOf="@+id/iv_gallery" android:layout_below="@+id/tv_title"/>
+        <TextView android:textSize="11sp" android:textColor="@color/text_gray" android:ellipsize="end" android:id="@+id/tv_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="15dp" android:text="介绍" android:maxLines="2" android:layout_toRightOf="@+id/iv_gallery" android:layout_below="@+id/tv_type" android:lineSpacingExtra="4dp"/>
+    </RelativeLayout>
+    <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="85dp"/>
+</LinearLayout>

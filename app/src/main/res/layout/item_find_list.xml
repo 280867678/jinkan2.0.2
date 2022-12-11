@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:hedgehog="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="?android:attr/selectableItemBackground">
+    <RelativeLayout android:id="@+id/rlyt_grid" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+        <me.tvspark.widget.RoundImageView android:id="@+id/iv_cover_grid" android:layout_width="match_parent" android:layout_height="158dp" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+        <TextView android:textSize="13sp" android:textColor="@color/black" android:ellipsize="end" android:id="@+id/tv_title_grid" android:paddingLeft="2dp" android:paddingTop="5dp" android:paddingRight="2dp" android:paddingBottom="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="清新养眼，妹子是也" android:maxLines="1" android:layout_below="@+id/iv_cover_grid"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" android:layout_below="@+id/tv_title_grid">
+            <com.hedgehog.ratingbar.RatingBar android:layout_gravity="center" android:id="@+id/ratingBar_grid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.5dp" hedgehog:clickable="false" hedgehog:halfstart="true" hedgehog:starCount="5" hedgehog:starEmpty="@drawable/icon_grade_empty" hedgehog:starFill="@drawable/icon_grade_all" hedgehog:starHalf="@drawable/icon_grade_half" hedgehog:starImageHeight="11dp" hedgehog:starImagePadding="0.1dp" hedgehog:starImageWidth="13dp"/>
+            <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:layout_gravity="center_vertical" android:id="@+id/tv_rate_grid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:text="评分"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

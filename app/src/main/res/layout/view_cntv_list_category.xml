@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/llyt_rv_category" android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginLeft="3dp" android:layout_marginRight="4dp">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_type" android:paddingLeft="7dp" android:paddingTop="3dp" android:paddingRight="7dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

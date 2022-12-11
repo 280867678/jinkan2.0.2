@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="53dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
+        <ImageView android:id="@+id/iv_webview" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="45dp" android:layout_height="match_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:srcCompat="@drawable/ic_webview_gray"/>
+        <TextView android:textSize="13sp" android:textColor="@color/text_black" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="15dp" android:text="清新养眼" android:maxLines="1" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="10dp" android:layout_marginRight="20dp"/>
+</LinearLayout>

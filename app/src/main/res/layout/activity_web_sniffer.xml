@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/flyt_content" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="55dp" android:layout_marginBottom="45dp"/>
+    <ImageView android:id="@+id/iv_mask" android:background="@drawable/shape_episode_detail_top" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="55dp" android:layout_marginBottom="45dp"/>
+    <RelativeLayout android:id="@+id/rlyt_sniff_finish" android:background="@drawable/bg_top_corner_white" android:paddingLeft="25dp" android:paddingTop="13dp" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="140dp" android:layout_marginBottom="45dp" android:layout_alignParentBottom="true">
+        <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/text_black2" android:id="@+id/tv_finish" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="嗅探结果"/>
+        <ImageView android:id="@+id/iv_dialog_close" android:padding="2dp" android:layout_width="50dp" android:layout_height="25dp" android:layout_marginTop="8dp" android:layout_marginRight="11dp" android:src="@drawable/ic_web_close" android:layout_alignParentRight="true"/>
+        <RelativeLayout android:id="@+id/rlyt_play_type" android:layout_width="150dp" android:layout_height="20dp" android:layout_toLeftOf="@+id/iv_dialog_close" android:layout_alignTop="@+id/tv_finish">
+            <ImageView android:id="@+id/ivSelArrow" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="10dp" android:src="@drawable/ic_arrow_drop_down_gray" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <TextView android:textSize="13sp" android:textColor="@color/text_black" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_play_type" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="X5 浏览" android:maxLines="1" android:layout_toLeftOf="@+id/ivSelArrow"/>
+        </RelativeLayout>
+        <ImageView android:id="@+id/iv_dlna" android:padding="4dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginTop="56dp" android:layout_marginRight="16dp" android:src="@drawable/ic_fab_cast" android:layout_alignParentRight="true"/>
+        <ImageView android:id="@+id/iv_play" android:padding="7dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginTop="54dp" android:layout_marginRight="10dp" android:src="@drawable/video_play_yes" android:layout_toLeftOf="@+id/iv_dlna"/>
+        <TextView android:textSize="12sp" android:textColor="@color/text_black" android:ellipsize="end" android:gravity="left" android:id="@+id/tv_sniff_url" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:layout_marginRight="20dp" android:text="http://www.baidubaidubaidubaidubaidubaidubaidubaidubaidu.com" android:maxLines="2" android:layout_toLeftOf="@+id/iv_play" android:layout_below="@+id/tv_finish"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/llyt_bar" android:background="@color/white" android:layout_width="match_parent" android:layout_height="45dp" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@+id/rlyt_web_back" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_web_back" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_web_back_gray" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlyt_web_forward" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_web_forward" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_web_forward_gray" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlyt_web_result" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_web_result" android:layout_width="25dp" android:layout_height="25dp" android:layout_centerInParent="true" app:srcCompat="@drawable/ic_web_result_0"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlyt_web_refresh" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_web_refresh" android:layout_width="25dp" android:layout_height="25dp" android:layout_centerInParent="true" app:srcCompat="@drawable/ic_web_refresh"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlyt_web_setting" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_web_setting" android:layout_width="25dp" android:layout_height="25dp" android:layout_centerInParent="true" app:srcCompat="@drawable/ic_web_nav_set"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/llyt_navigation" android:background="@color/white" android:layout_width="match_parent" android:layout_height="55dp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_bg_home_top_search" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp" android:layout_marginBottom="12dp" android:layout_weight="1">
+            <ImageView android:background="@drawable/ic_web_ico" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginLeft="12dp" android:layout_marginTop="1dp" android:layout_centerVertical="true"/>
+            <TextView android:textSize="14sp" android:textColor="@color/text_gray" android:ellipsize="end" android:id="@+id/tv_web_url" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="http://www.baidu.com" android:maxLines="1" android:layout_weight="1" android:layout_centerVertical="true"/>
+            <RelativeLayout android:id="@+id/rlyt_web_down" android:layout_width="35dp" android:layout_height="match_parent">
+                <ImageView android:layout_width="17dp" android:layout_height="17dp" android:layout_centerInParent="true" app:srcCompat="@drawable/ic_web_sniffer_down"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rlyt_adb" android:visibility="gone" android:layout_width="30dp" android:layout_height="match_parent">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_centerInParent="true" app:srcCompat="@drawable/bg_adb"/>
+                <TextView android:textSize="9sp" android:textColor="@color/white" android:id="@+id/tv_adb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rlyt_web_collect" android:layout_width="35dp" android:layout_height="match_parent" android:layout_marginRight="3dp">
+                <ImageView android:id="@+id/iv_web_collect" android:layout_width="17dp" android:layout_height="17dp" android:layout_centerInParent="true" app:srcCompat="@drawable/ic_web_collect_no"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

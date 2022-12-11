@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:zhy="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
+            <TextView android:textSize="17sp" android:textColor="#666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="最近搜索" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/iv_del" android:padding="6dp" android:layout_width="40dp" android:layout_height="30dp" android:src="@drawable/ic_del" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <View android:background="#f2f2f2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp"/>
+        <ScrollView android:paddingBottom="10dp" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_marginLeft="13dp" android:layout_marginRight="13dp" android:layout_weight="1">
+            <com.zhy.view.flowlayout.TagFlowLayout android:id="@+id/tags" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" zhy:auto_select_effect="true" zhy:max_select="1"/>
+        </ScrollView>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/flyt_banner" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="0.1dp"/>
+</LinearLayout>

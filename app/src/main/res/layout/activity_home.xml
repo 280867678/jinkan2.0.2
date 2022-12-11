@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="#fff3f3f3" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/rlyt_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <View android:id="@+id/view_line" android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp"/>
+        <RadioGroup android:orientation="horizontal" android:id="@+id/rg_bottom" android:background="@color/white" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="48dp">
+            <RadioButton android:textSize="10dp" android:textColor="@drawable/selector_home_bottom_text" android:gravity="center" android:id="@+id/rb_home" android:layout_width="match_parent" android:layout_height="match_parent" android:button="@null" android:text="首页" android:layout_weight="1"/>
+            <RadioButton android:textSize="10dp" android:textColor="@drawable/selector_home_bottom_text" android:gravity="center" android:id="@+id/rb_webSource" android:layout_width="match_parent" android:layout_height="match_parent" android:button="@null" android:text="影视库" android:layout_weight="1"/>
+            <RadioButton android:textSize="10dp" android:textColor="@drawable/selector_home_bottom_text" android:gravity="center" android:id="@+id/rb_category" android:layout_width="match_parent" android:layout_height="match_parent" android:button="@null" android:text="分类筛选" android:layout_weight="1"/>
+            <RadioButton android:textSize="10dp" android:textColor="@drawable/selector_home_bottom_text" android:gravity="center" android:id="@+id/rb_me" android:layout_width="match_parent" android:layout_height="match_parent" android:button="@null" android:text="我的" android:layout_weight="1"/>
+        </RadioGroup>
+    </LinearLayout>
+    <me.tvspark.widget.NoScrollViewPager android:id="@+id/view_pager_main" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/rlyt_bottom"/>
+</RelativeLayout>

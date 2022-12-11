@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/flyt_banner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/llyt_search" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/flyt_banner">
+        <RelativeLayout android:paddingLeft="14dp" android:paddingRight="14dp" android:layout_width="match_parent" android:layout_height="40dp">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llyt_official_custom" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <TextView android:textSize="13sp" android:textColor="@color/colorPrimary" android:gravity="center" android:id="@+id/tv_official" android:background="@drawable/shape_bg_category" android:paddingLeft="11dp" android:paddingTop="2dp" android:paddingRight="11dp" android:paddingBottom="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="推荐"/>
+                <TextView android:textSize="13sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/tv_custom" android:paddingLeft="11dp" android:paddingTop="2dp" android:paddingRight="11dp" android:paddingBottom="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="自定义"/>
+            </LinearLayout>
+            <ProgressBar android:id="@+id/pbar" android:visibility="visible" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="-7dp" android:layout_marginRight="2dp" android:indeterminate="false" android:indeterminateDrawable="@drawable/loading" android:layout_centerVertical="true"/>
+            <TextView android:textSize="14sp" android:textColor="@color/text_gray" android:ellipsize="end" android:gravity="center" android:id="@+id/tv_search_status" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:text="网页搜索中....." android:maxLines="1" android:layout_toLeftOf="@+id/llyt_official_custom" android:layout_toRightOf="@+id/pbar" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <View android:background="#e5e5e5" android:layout_width="match_parent" android:layout_height="0.1dp" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+        <androidx.viewpager.widget.ViewPager android:id="@+id/viewpager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>

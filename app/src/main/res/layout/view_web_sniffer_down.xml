@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_url" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <EditText android:id="@+id/et_url" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="下载链接"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <EditText android:id="@+id/et_dir" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="文件夹名"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <EditText android:id="@+id/et_file" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="文件名"/>
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

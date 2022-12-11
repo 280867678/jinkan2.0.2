@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="115dp">
+            <ImageView android:id="@+id/iv_search_logo" android:padding="5dp" android:layout_width="135dp" android:layout_height="45dp" android:src="@drawable/ic_engine_logo" android:scaleType="centerCrop"/>
+            <RelativeLayout android:id="@+id/rlyt_search" android:background="@drawable/shape_bg_home_top_search" android:layout_width="match_parent" android:layout_height="43dp" android:layout_marginLeft="25dp" android:layout_marginTop="25dp" android:layout_marginRight="25dp" android:layout_marginBottom="9dp">
+                <ImageView android:background="@drawable/ic_search" android:layout_width="17dp" android:layout_height="17dp" android:layout_marginLeft="15dp" android:layout_centerVertical="true"/>
+                <TextView android:textSize="15sp" android:textColor="@color/text_gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="43dp" android:text="网页搜索或输入网址" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_content" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

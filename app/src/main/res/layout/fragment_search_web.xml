@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.androidkun.xtablayout.XTabLayout android:layout_gravity="center_horizontal" android:id="@+id/tablayout" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginBottom="5dp" app:xTabDividerWidthWidthText="false" app:xTabIndicatorColor="@color/colorPrimary" app:xTabIndicatorHeight="2dp" app:xTabIndicatorWidth="20dp" app:xTabMode="0x0" app:xTabSelectedTextColor="@color/colorPrimary" app:xTabSelectedTextSize="14sp" app:xTabTextColor="@color/text_gray" app:xTabTextSize="13sp"/>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/viewpager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:background="@drawable/shape_bg_dialog_desc" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="410dp">
+        <me.tvspark.widget.RoundImageView android:id="@+id/iv_bg" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <me.tvspark.widget.RoundImageView android:id="@+id/iv_mask1" android:layout_width="match_parent" android:layout_height="160dp"/>
+        <ImageView android:id="@+id/iv_mask2" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="150dp"/>
+        <ImageView android:background="@drawable/shape_rank_mask" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <RelativeLayout android:id="@+id/rlyt_title" android:layout_width="match_parent" android:layout_height="60dp">
+            <ImageView android:id="@+id/iv_dialog_close" android:padding="2dp" android:layout_width="50dp" android:layout_height="25dp" android:layout_marginRight="2dp" android:src="@drawable/ic_web_close_white" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:text="标题" android:maxLines="1" android:layout_toLeftOf="@+id/iv_dialog_close" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/llyt_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_alignParentBottom="true">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llyt_douban" android:paddingLeft="15dp" android:paddingTop="10dp" android:paddingRight="15dp" android:paddingBottom="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_top_douban"/>
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="豆瓣查找"/>
+                <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_arrow_right_big"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llyt_search" android:paddingLeft="15dp" android:paddingTop="10dp" android:paddingRight="15dp" android:paddingBottom="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_top_search"/>
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="搜索资源"/>
+                <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_arrow_right_big"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/llyt_bottom" android:layout_below="@+id/rlyt_title">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <me.tvspark.widget.RoundImageView android:id="@+id/iv_poster" android:layout_width="98dp" android:layout_height="130dp" android:layout_marginLeft="18dp" android:src="@drawable/bg_place_holder_vertical" android:scaleType="centerCrop"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/llyt_tvs" android:layout_width="200dp" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="5dp" android:layout_toRightOf="@+id/iv_poster">
+                    <TextView android:textSize="12sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/tv_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:maxLines="2" android:lineSpacingMultiplier="1.2"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/tv_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:maxLines="2" android:lineSpacingMultiplier="1.2"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/tv_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:maxLines="2" android:lineSpacingMultiplier="1.2"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/tv_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:maxLines="2" android:lineSpacingMultiplier="1.2"/>
+                </LinearLayout>
+                <RelativeLayout android:id="@+id/rlyt_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="13dp" android:layout_marginRight="18dp" android:layout_below="@+id/iv_poster">
+                    <ProgressBar android:id="@+id/pbar" android:visibility="visible" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginTop="50dp" android:indeterminate="false" android:indeterminateDrawable="@drawable/loading" android:layout_centerHorizontal="true"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/white" android:id="@+id/tv_desc" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="简介：暂无" android:lineSpacingMultiplier="1.5"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+    <FrameLayout android:id="@+id/flyt_banner" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

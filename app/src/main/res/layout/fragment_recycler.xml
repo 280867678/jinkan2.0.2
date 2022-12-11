@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/refresh_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_error" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:background="@drawable/bg_load_empty" android:layout_width="95dp" android:layout_height="95dp"/>
+        <TextView android:textSize="13sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="解析失败 请切换网站"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp">
+            <TextView android:textSize="14sp" android:textColor="@color/colorPrimary" android:id="@+id/tv_go_origin_web" android:background="@drawable/bg_empty_circle" android:paddingLeft="20dp" android:paddingTop="8dp" android:paddingRight="20dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="去原网页"/>
+            <TextView android:textSize="14sp" android:textColor="@color/colorPrimary" android:id="@+id/tv_retry" android:background="@drawable/bg_empty_circle" android:paddingLeft="20dp" android:paddingTop="8dp" android:paddingRight="20dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="点我重试"/>
+        </LinearLayout>
+        <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/tv_change_web" android:background="@drawable/bg_empty_circle_color" android:paddingLeft="30dp" android:paddingTop="10dp" android:paddingRight="30dp" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="切 换 显 示 网 站"/>
+    </LinearLayout>
+</RelativeLayout>

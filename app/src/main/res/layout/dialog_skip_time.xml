@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bg_corner_white_corner3" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+    <LinearLayout android:orientation="vertical" android:id="@+id/llyt_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@+id/flyt_banner" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="0.1dp"/>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <TextView android:textSize="18sp" android:textColor="@color/text_black2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="跳过片头片尾时间" android:maxLines="1"/>
+                <TextView android:textSize="13sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="仅KSY播放模式"/>
+            </LinearLayout>
+            <TextView android:textSize="15sp" android:textColor="@color/text_black" android:id="@+id/tv_skip_head" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="20dp" android:text="跳过片头：0 秒"/>
+            <SeekBar android:id="@+id/seek_head" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:max="300"/>
+            <TextView android:textSize="15sp" android:textColor="@color/text_black" android:id="@+id/tv_skip_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="15dp" android:text="跳过片尾：0 秒"/>
+            <SeekBar android:id="@+id/seek_end" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:max="300"/>
+        </LinearLayout>
+        <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="15dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="45dp" android:layout_alignParentBottom="true">
+            <TextView android:textSize="16sp" android:textColor="@color/text_black2" android:gravity="center" android:id="@+id/tv_cancel" android:layout_width="0dp" android:layout_height="match_parent" android:text="取消" android:layout_weight="1"/>
+            <View android:background="@color/line_color" android:layout_width="1dp" android:layout_height="match_parent"/>
+            <TextView android:textSize="16sp" android:textColor="@color/colorPrimary" android:gravity="center" android:id="@+id/tv_ok" android:layout_width="0dp" android:layout_height="match_parent" android:text="确定" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

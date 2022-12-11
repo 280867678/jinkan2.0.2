@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/llyt_content" android:background="@drawable/bg_white_corner_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="250dp">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="58dp" android:layout_marginTop="5dp">
+            <TextView android:textSize="18sp" android:textColor="@color/black" android:id="@+id/txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:text="颜色选择" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_content" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:paddingRight="20dp" android:paddingBottom="3dp" android:layout_width="match_parent" android:layout_height="60dp">
+            <TextView android:textSize="15sp" android:textColor="@color/colorPrimary" android:gravity="center" android:id="@+id/tv_cancel" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="30dp" android:text="取消"/>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/flyt_bg" android:clickable="false" android:layout_width="0dp" android:layout_height="0dp" android:layout_alignLeft="@+id/llyt_content" android:layout_alignTop="@+id/llyt_content" android:layout_alignRight="@+id/llyt_content" android:layout_alignBottom="@+id/llyt_content"/>
+</RelativeLayout>

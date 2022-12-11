@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/ll_content" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rlyt_action_bar" android:background="@color/background" android:layout_width="match_parent" android:layout_height="@dimen/tool_bar_height">
+        <ImageView android:id="@+id/iv_back" android:padding="13dp" android:clickable="true" android:layout_width="50dp" android:layout_height="match_parent" android:layout_marginLeft="3dp" android:src="@drawable/ic_toolbar_back_black"/>
+        <TextView android:textSize="19sp" android:textColor="@color/text_black" android:ellipsize="end" android:id="@+id/tv_toolbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="编辑" android:maxLines="1" android:layout_toRightOf="@+id/iv_back" android:layout_centerVertical="true"/>
+        <TextView android:textSize="15sp" android:textColor="@color/text_black" android:gravity="center" android:id="@+id/action_save" android:layout_width="50dp" android:layout_height="match_parent" android:layout_marginRight="10dp" android:text="保存" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <TextView android:textSize="15sp" android:textColor="@color/text_black" android:gravity="center" android:id="@+id/action_test" android:layout_width="50dp" android:layout_height="match_parent" android:text="测试" android:layout_toLeftOf="@+id/action_save" android:layout_centerVertical="true"/>
+        <TextView android:textSize="15sp" android:textColor="@color/text_black" android:gravity="center" android:id="@+id/action_copy" android:layout_width="50dp" android:layout_height="match_parent" android:text="复制" android:layout_toLeftOf="@+id/action_test" android:layout_centerVertical="true"/>
+        <TextView android:textSize="15sp" android:textColor="@color/text_black" android:gravity="center" android:id="@+id/action_tutorial" android:visibility="gone" android:layout_width="50dp" android:layout_height="match_parent" android:text="教程" android:layout_toLeftOf="@+id/action_copy" android:layout_centerVertical="true"/>
+        <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <ScrollView android:id="@+id/scroll" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="15dp" android:layout_weight="1">
+                    <EditText android:id="@+id/et_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="网站名称"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView android:textSize="12sp" android:textColor="@color/red" android:layout_gravity="center_vertical" android:id="@+id/tv_del" android:background="@drawable/bg_web_version_installed" android:paddingLeft="9dp" android:paddingTop="3dp" android:paddingRight="9dp" android:paddingBottom="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="5dp" android:text="删除源"/>
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_serial_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="优先级" android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="13sp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="请求类型" android:maxLines="1"/>
+                    <Spinner android:id="@+id/sp_req_type" android:layout_width="match_parent" android:layout_height="38dp" android:layout_marginTop="5dp" android:prompt="@string/spinner_title" android:spinnerMode="dropdown"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_weight="1">
+                    <TextView android:textSize="13sp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="请求编码" android:maxLines="1"/>
+                    <Spinner android:id="@+id/sp_req_charset" android:layout_width="match_parent" android:layout_height="38dp" android:layout_marginTop="5dp" android:prompt="@string/spinner_title" android:spinnerMode="dropdown"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_weight="1">
+                    <TextView android:textSize="13sp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="网页编码" android:maxLines="1"/>
+                    <Spinner android:id="@+id/sp_html_charset" android:layout_width="match_parent" android:layout_height="38dp" android:layout_marginTop="5dp" android:prompt="@string/spinner_title" android:spinnerMode="dropdown"/>
+                </LinearLayout>
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_user_agent" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="HttpUserAgent(可空默认为手机模式)"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_base_url" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="网站URL"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_search_url" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="搜索地址"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_search_post_data" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_search_post_data" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/post_msg"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView android:textSize="13sp" android:textColor="@color/colorPrimary" android:gravity="center" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="以下几个规则为可选项，可以不填写"/>
+            <TextView android:textSize="13sp" android:textColor="@color/colorPrimary" android:gravity="center" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="填写后，将可以解析搜索列表页"/>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_rule_result_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="搜索结果列表每一项规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_rule_result_cover" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="搜索结果列表每项图片规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_result_cover_prefix" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="搜索结果列表每项图片前缀补充(可为空)"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_rule_result_link" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="搜索结果列表每项地址规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_result_link_prefix" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="搜索结果列表每项地址前缀补充(可为空)"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_result_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="搜索结果列表每项标题"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView android:textSize="13sp" android:textColor="@color/colorPrimary" android:gravity="center" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="以下几个规则为可选项，可以不填写"/>
+            <TextView android:textSize="13sp" android:textColor="@color/colorPrimary" android:gravity="center" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="填写后，将可以解析剧集详情页"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+                <Switch android:layout_gravity="center_vertical" android:id="@+id/switcher_req_detail_web" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false"/>
+                <TextView android:textColor="@color/text_gray" android:layout_gravity="center_vertical" android:id="@+id/tv_switch_req_detail_web" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="使用WebView请求详情页"/>
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_detail_cover" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="剧集详情页海报地址(可为空)"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_detail_cover_prefix" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="剧集详情页海报地址前缀补充(可为空)"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_detail_intro" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="剧集详情页简介(可为空)"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_channel_groups" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="剧集详情页播放线路列表规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_episode_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="剧集详情页各线路每集规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_episode_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="剧集详情页每集标题"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_episode_link" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="剧集详情页每集链接"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_episode_link_prefix" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="剧集详情页每集链接前缀补充(可为空)"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView android:textSize="13sp" android:textColor="@color/colorPrimary" android:gravity="center" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="以下几个规则为可选项，可以不填写"/>
+            <TextView android:textSize="13sp" android:textColor="@color/colorPrimary" android:gravity="center" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="填写后，将可以解析网站首页"/>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_web_index" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="网站首页地址"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_index_1_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="栏目一列表规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_index_2_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="栏目二列表规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_index_3_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="栏目三列表规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_index_4_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="栏目四列表规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_index_link" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="栏目列表中每项地址规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_index_link_prefix" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="栏目列表中每项地址前缀（可空）"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_index_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="栏目列表中每项名称规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_index_cover" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="栏目列表中每项图片地址规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_index_cover_prefix" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="栏目列表中每项图片地址前缀（可空）"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_index_actor" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="栏目列表中每项演员规则"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <View android:layout_width="match_parent" android:layout_height="25dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="17dp" android:layout_height="17dp" android:src="@drawable/ic_web_icon"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:layout_weight="1">
+            <TextView android:textSize="15sp" android:textColor="@color/text_black" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="这里是标题" android:maxLines="1"/>
+            <TextView android:textSize="9sp" android:textColor="@color/color_bd_bd_bd" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_url" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="http://www.baidu.com" android:maxLines="1"/>
+        </LinearLayout>
+        <TextView android:textSize="10sp" android:textColor="@color/color_bd_bd_bd" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/tv_del" android:background="@drawable/bg_del_line_circle" android:paddingLeft="15dp" android:paddingTop="5dp" android:paddingRight="15dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3dp" android:text="删 除"/>
+        <ImageView android:layout_gravity="center" android:id="@+id/iv_check" android:layout_width="19dp" android:layout_height="19dp" android:layout_marginLeft="17dp" android:src="@drawable/ic_check"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/iv_line" android:background="@drawable/view_dotted_line" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+</LinearLayout>

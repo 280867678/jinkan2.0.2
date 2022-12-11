@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="efp__size_units">
+        <item>B</item>
+        <item>kB</item>
+        <item>mB</item>
+        <item>gB</item>
+        <item>tB</item>
+        <item>pB</item>
+    </array>
+    <array name="efp__sorting_types">
+        <item>文件名升序</item>
+        <item>文件名降序</item>
+        <item>文件大小升序</item>
+        <item>文件大小降序</item>
+        <item>日期升序</item>
+        <item>日期降序</item>
+    </array>
+</resources>

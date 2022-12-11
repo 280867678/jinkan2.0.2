@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/llyt_all" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_channel" android:background="@drawable/bg_corner_left_live" android:scrollbars="none" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:layout_weight="0.4"/>
+        <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_episode" android:visibility="gone" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <ProgressBar android:id="@+id/pb_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_right_retry" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:background="@drawable/bg_load_empty" android:layout_width="95dp" android:layout_height="95dp"/>
+                <TextView android:textSize="14sp" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="网页解析失败"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/white" android:id="@+id/tv_right_retry" android:background="@drawable/bg_empty_circle_color" android:paddingLeft="20dp" android:paddingTop="8dp" android:paddingRight="20dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点我重试"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <ProgressBar android:id="@+id/pb_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_error" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:background="@drawable/bg_load_empty" android:layout_width="95dp" android:layout_height="95dp"/>
+        <TextView android:textSize="14sp" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="网页解析失败"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp">
+            <TextView android:textSize="14sp" android:textColor="@color/white" android:id="@+id/tv_retry" android:background="@drawable/bg_empty_circle_color" android:paddingLeft="20dp" android:paddingTop="8dp" android:paddingRight="20dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点我重试"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

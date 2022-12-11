@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/background" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/vod_content" android:background="@color/black" android:layout_width="match_parent" android:layout_height="@dimen/top_player_height">
+        <me.tvspark.utils.player.MyJzvdStd android:gravity="center" android:id="@+id/video" android:layout_width="match_parent" android:layout_height="225dp"/>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView android:id="@+id/scroll_content" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/vod_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="12dp" android:layout_marginRight="18dp">
+            <me.tvspark.widget.RoundImageView android:id="@+id/iv_poster" android:layout_width="75dp" android:layout_height="105dp" android:layout_marginRight="5dp" android:src="@drawable/bg_place_holder_vertical" android:scaleType="centerCrop" android:layout_alignParentRight="true"/>
+            <TextView android:textSize="19sp" android:textStyle="bold" android:textColor="@color/text_black2" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="剧集详情" android:maxLines="1" android:layout_toLeftOf="@+id/iv_poster"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/llyt_msg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginRight="8dp" android:layout_toLeftOf="@+id/iv_poster" android:layout_below="@+id/tv_title">
+                <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_web_name" android:background="@drawable/bg_detail_tag_corner_4_1" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="85dp" android:text="网站影视网" android:maxLines="1"/>
+                <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_web_url" android:background="@drawable/bg_detail_tag_corner_4_2" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:maxWidth="125dp" android:text="www.test.com" android:maxLines="1"/>
+                <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:gravity="center_vertical" android:id="@+id/tv_douban" android:background="@drawable/bg_detail_tag_corner_4_3" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="8dp" android:text="豆瓣查"/>
+            </LinearLayout>
+            <TextView android:textSize="13sp" android:textColor="@color/text_black" android:ellipsize="end" android:id="@+id/tv_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="70dp" android:layout_marginRight="80dp" android:text="简介：暂无" android:maxLines="1" android:layout_toLeftOf="@+id/iv_poster"/>
+            <TextView android:textSize="13sp" android:textColor="@color/text_gray" android:id="@+id/tv_desc_more" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查看更多 &gt;" android:layout_below="@+id/tv_desc"/>
+            <View android:id="@+id/view_line1" android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginTop="18dp" android:layout_below="@+id/iv_poster"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/llyt_operate" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:layout_below="@+id/view_line1" android:layout_alignParentRight="true">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_operate1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:padding="2dp" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_detail_search"/>
+                    <TextView android:textSize="11sp" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="换源搜"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_operate2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:padding="1dp" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_detail_cast"/>
+                    <TextView android:textSize="11sp" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="云播投屏页"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_operate3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:padding="1.5dp" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_detail_down"/>
+                    <TextView android:textSize="11sp" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="下载页"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_operate4" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:id="@+id/iv_operate4" android:padding="3dp" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_detail_collect_no"/>
+                    <TextView android:textSize="11sp" android:textColor="@color/text_black" android:id="@+id/tv_operate4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="收藏"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_operate5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:padding="3dp" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_detail_history"/>
+                    <TextView android:textSize="11sp" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="历史记录页"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:id="@+id/view_line2" android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginTop="13dp" android:layout_below="@+id/llyt_operate"/>
+            <TextView android:textSize="16sp" android:textColor="@color/text_black" android:id="@+id/tv_flag1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="剧集" android:layout_below="@+id/view_line2"/>
+            <TextView android:textSize="13sp" android:textColor="@color/text_gray" android:id="@+id/tv_flag2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginBottom="2dp" android:text="(长按分集显示更多选项)" android:layout_toRightOf="@+id/tv_flag1" android:layout_alignBottom="@+id/tv_flag1"/>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llyt_open_all" android:background="@drawable/bg_detail_tag_corner_4_2" android:paddingLeft="10dp" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="28dp" android:layout_marginTop="15dp" android:layout_below="@+id/view_line2" android:layout_alignParentRight="true">
+                <TextView android:textSize="15sp" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全部"/>
+                <ImageView android:layout_width="10dp" android:layout_height="10dp" android:layout_marginLeft="3dp" android:src="@drawable/ic_arrow_right_black"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llyt_sort" android:background="@drawable/bg_detail_tag_corner_4_2" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="28dp" android:layout_marginTop="15dp" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/llyt_open_all" android:layout_below="@+id/view_line2">
+                <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_detail_sort"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_channel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_below="@+id/llyt_sort"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_episode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:layout_below="@+id/rv_channel"/>
+            <FrameLayout android:id="@+id/flyt_native" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="-18dp" android:layout_marginTop="20dp" android:layout_marginRight="-18dp" android:layout_below="@+id/rv_episode"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@+id/llyt_all_channel" android:background="@color/background" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/vod_content">
+        <RelativeLayout android:paddingLeft="18dp" android:layout_width="match_parent" android:layout_height="55dp">
+            <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/green" android:ellipsize="end" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="剧集" android:maxLines="1" android:layout_centerVertical="true" android:fontFamily="sans-serif-thin"/>
+            <ImageView android:id="@+id/iv_all_channel_close" android:padding="3dp" android:layout_width="50dp" android:layout_height="25dp" android:layout_marginRight="2dp" android:src="@drawable/ic_web_close" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llyt_sort_all" android:background="@drawable/bg_detail_tag_corner_4_2" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="28dp" android:layout_marginTop="13dp" android:layout_marginRight="5dp" android:layout_toLeftOf="@+id/iv_all_channel_close">
+                <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_detail_sort"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llyt_sort_type" android:background="@drawable/bg_detail_tag_corner_4_2" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="28dp" android:layout_marginTop="13dp" android:layout_marginRight="20dp" android:layout_toLeftOf="@+id/llyt_sort_all">
+                <ImageView android:id="@+id/iv_sort_type" android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_category_vertical_green"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_all_chanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp"/>
+            <View android:background="#efefef" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginLeft="18dp" android:layout_marginTop="10dp" android:layout_marginRight="18dp" android:layout_marginBottom="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_all_episode" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/flyt_banner" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>

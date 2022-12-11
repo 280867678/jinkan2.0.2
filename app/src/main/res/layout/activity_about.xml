@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/frameLayout" android:background="@color/background" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:layout_width="match_parent" android:layout_height="200dp" android:elevation="2dp">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/collapsing_toolbar" android:layout_width="match_parent" android:layout_height="match_parent" app:contentScrim="@color/colorPrimary" app:layout_scrollFlags="0x3">
+            <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="56dp" android:elevation="2dp" app:layout_collapseMode="1" app:theme="@style/ToolbarTheme" app:title="@string/app_name"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="10dp" android:text="版本"/>
+                    <TextView android:textColor="@color/text_black" android:id="@+id/tv_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="鲸鱼视频V1.0.0"/>
+                    <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp"/>
+                    <TextView android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="10dp" android:text="联系"/>
+                    <TextView android:textColor="@color/text_black" android:id="@+id/tv_email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="grayindus@163.com"/>
+                    <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="15dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.7">
+                    <ImageView android:layout_width="75dp" android:layout_height="75dp" android:src="@drawable/ic_qrcode"/>
+                    <TextView android:textColor="@color/black" android:id="@+id/tv_god" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="6dp" android:text="公众号"/>
+                    <TextView android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AiredApp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:text="免责"/>
+            <TextView android:textColor="@color/text_black" android:id="@+id/tv_mianze" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="@string/mianzeAbout" android:lineSpacingExtra="5dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_bg_dialog_cast" android:paddingLeft="15dp" android:paddingTop="20dp" android:paddingRight="15dp" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="350dp">
+        <TextView android:textSize="17sp" android:textStyle="bold" android:textColor="@color/black" android:ellipsize="end" android:gravity="center" android:id="@+id/tv_dialog_title" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="无线投屏" android:maxLines="1" android:layout_centerVertical="true"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_progress" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+        <LinearLayout android:orientation="horizontal" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="50dp">
+            <TextView android:textSize="15sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/tv_net_setting" android:layout_width="0dp" android:layout_height="match_parent" android:text="网络设置" android:layout_weight="1"/>
+            <TextView android:textSize="15sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/tv_cast_control" android:layout_width="0dp" android:layout_height="match_parent" android:text="遥控器页" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

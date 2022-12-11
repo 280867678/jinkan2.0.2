@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/refresh_layout" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/iv_1" android:layout_width="35dp" android:layout_height="35dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+            <ImageView android:id="@+id/iv_2" android:layout_width="35dp" android:layout_height="35dp" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/iv_1"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/llyt_operate" android:layout_width="match_parent" android:layout_height="62dp">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <ImageView android:background="@drawable/ic_top_dlna" android:layout_width="28dp" android:layout_height="28dp" android:layout_marginTop="4dp"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="投 屏"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <ImageView android:background="@drawable/ic_top_down" android:layout_width="28dp" android:layout_height="28dp" android:layout_marginTop="4dp"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="缓 存"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_search" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <ImageView android:background="@drawable/ic_top_search" android:layout_width="28dp" android:layout_height="28dp" android:layout_marginTop="4dp"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="搜索"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <ImageView android:background="@drawable/ic_top_collect" android:layout_width="28dp" android:layout_height="28dp" android:layout_marginTop="4dp"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="收 藏"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_5" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <ImageView android:background="@drawable/ic_top_history" android:layout_width="28dp" android:layout_height="28dp" android:layout_marginTop="4dp"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="记 录"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/llyt_marquee" android:visibility="gone" android:layout_width="match_parent" android:layout_height="28dp" android:layout_marginLeft="20dp" android:layout_marginTop="8dp" android:layout_marginRight="20dp" android:layout_below="@+id/llyt_operate">
+                <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_marquee"/>
+                <TextView android:textSize="13sp" android:textColor="@color/text_gray3" android:ellipsize="end" android:id="@+id/tv_marquee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="跑马灯测试文字" android:maxLines="1"/>
+            </LinearLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/llyt_marquee">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_empty" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="150dp">
+                    <ImageView android:background="@drawable/bg_load_empty" android:layout_width="95dp" android:layout_height="95dp"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="数据获取失败"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp">
+                        <TextView android:textSize="14sp" android:textColor="@color/colorPrimary" android:id="@+id/tv_retry" android:background="@drawable/bg_empty_circle" android:paddingLeft="20dp" android:paddingTop="8dp" android:paddingRight="20dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点 我 重 试"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout android:orientation="vertical" android:id="@+id/rlyt_rank" android:paddingLeft="20dp" android:paddingRight="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_content_rank" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/llyt_rec" android:paddingBottom="10dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/rlyt_rank">
+                    <RelativeLayout android:orientation="vertical" android:id="@+id/rlyt_tv" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+                        <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/text_black2" android:id="@+id/tv_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="剧集"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/text_gray" android:id="@+id/tv_more_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查看更多" android:layout_alignBottom="@+id/tv_title_tv" android:layout_alignParentRight="true"/>
+                        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_type_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_below="@+id/tv_title_tv"/>
+                        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_content_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:layout_below="@+id/rv_type_tv"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:orientation="vertical" android:id="@+id/rlyt_movie" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+                        <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/text_black2" android:id="@+id/tv_title_movie" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="电影"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/text_gray" android:id="@+id/tv_more_movie" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查看更多" android:layout_alignBottom="@+id/tv_title_movie" android:layout_alignParentRight="true"/>
+                        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_type_movie" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_below="@+id/tv_title_movie"/>
+                        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_content_movie" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:layout_below="@+id/rv_type_movie"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:orientation="vertical" android:id="@+id/rlyt_art" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+                        <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/text_black2" android:id="@+id/tv_title_art" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="综艺"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/text_gray" android:id="@+id/tv_more_art" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查看更多" android:layout_alignBottom="@+id/tv_title_art" android:layout_alignParentRight="true"/>
+                        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_type_art" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_below="@+id/tv_title_art"/>
+                        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_content_art" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:layout_below="@+id/rv_type_art"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:orientation="vertical" android:id="@+id/rlyt_anim" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+                        <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/text_black2" android:id="@+id/tv_title_anim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="动画"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/text_gray" android:id="@+id/tv_more_anim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查看更多" android:layout_alignBottom="@+id/tv_title_anim" android:layout_alignParentRight="true"/>
+                        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_type_anim" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_below="@+id/tv_title_anim"/>
+                        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_content_anim" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:layout_below="@+id/rv_type_anim"/>
+                    </RelativeLayout>
+                    <FrameLayout android:id="@+id/flyt_native" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

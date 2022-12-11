@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_bg_dialog_line" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:paddingLeft="20dp" android:layout_width="match_parent" android:layout_height="50dp">
+            <TextView android:textSize="14sp" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="播放列表" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/iv_close" android:padding="16dp" android:layout_width="50dp" android:layout_height="match_parent" android:src="@drawable/ic_web_close" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_file" android:background="@color/white" android:visibility="visible" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+        <FrameLayout android:id="@+id/flyt_banner" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:hedgehog="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:orientation="vertical" android:background="@color/white" android:paddingBottom="2dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:paddingLeft="20dp" android:paddingTop="14dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="17sp" android:textStyle="bold" android:textColor="@color/red" android:id="@+id/tv_rank_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="45dp" android:text="1"/>
+        <me.tvspark.widget.RoundImageView android:id="@+id/iv_cover" android:layout_width="75dp" android:layout_height="105dp" android:layout_marginLeft="15dp" android:src="@drawable/bg_place_holder_vertical" android:scaleType="centerCrop" android:layout_toRightOf="@+id/tv_rank_num"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/rlyt_people" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="13dp" android:layout_toRightOf="@+id/iv_cover">
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="19sp" android:textColor="@color/black" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="拳皇" android:singleLine="true"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp">
+                    <com.hedgehog.ratingbar.RatingBar android:layout_gravity="center" android:id="@+id/ratingBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.5dp" hedgehog:clickable="false" hedgehog:halfstart="true" hedgehog:starCount="5" hedgehog:starEmpty="@drawable/icon_grade_empty" hedgehog:starFill="@drawable/icon_grade_all" hedgehog:starHalf="@drawable/icon_grade_half" hedgehog:starImageHeight="11dp" hedgehog:starImagePadding="0.1dp" hedgehog:starImageWidth="13dp"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:layout_gravity="center_vertical" android:id="@+id/tv_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:text="评分"/>
+                </LinearLayout>
+                <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:ellipsize="end" android:id="@+id/tv_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="拳皇" android:maxLines="3" android:lineSpacingMultiplier="1.2"/>
+            </LinearLayout>
+            <View android:background="@drawable/dou_list_douban" android:layout_width="100dp" android:layout_height="match_parent" android:layout_marginLeft="-40dp" android:layout_marginRight="-40dp" android:layerType="software"/>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_douban" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_pan_search"/>
+                <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="豆瓣"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/llyt_comment" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:layout_marginTop="12dp" android:layout_below="@+id/iv_cover">
+            <View android:background="@color/line_color" android:layout_width="2dp" android:layout_height="match_parent"/>
+            <TextView android:textSize="12sp" android:textColor="@color/text_gray3" android:id="@+id/tv_comment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="评语：" android:lineSpacingMultiplier="1.4"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="5dp" android:layout_marginLeft="16dp" android:layout_marginTop="15dp"/>
+</LinearLayout>

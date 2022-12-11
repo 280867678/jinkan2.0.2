@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>站源编辑器</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/index.css" />
+	<script type="text/javascript" src="/index.js" defer></script>
+</head>
+
+<body>
+	<div class="editor">
+		<div class="setbox">
+			<div class="tabbox0">
+				<div class="tabtitle0">
+					<div name="首页" class="tab1 this">首页</div>
+					<div name="详情" class="tab2">详情</div>
+					<div name="分类" class="tab3">分类</div>
+					<div name="直播" class="tab4">直播</div>
+					<div name="下载" class="tab5">下载</div>
+				</div>
+				<div class="tabbody0">
+					<div class="tab1 this">
+						<textarea class="context" id="RuleIndexStringDecry" placeholder="这里输出解密后的数据"></textarea>
+					</div>
+					<div class="tab2">
+						<textarea class="context" id="RuleSeasonStringDecry" placeholder="这里输出解密后的数据"></textarea>
+					</div>
+					<div class="tab3">
+						<textarea class="context" id="RuleCategoryStringDecry" placeholder="这里输出解密后的数据"></textarea>
+					</div>
+					<div class="tab4">
+						<textarea class="context" id="RuleLiveStringDecry" placeholder="这里输出解密后的数据"></textarea>
+					</div>
+					<div class="tab5">
+						<textarea class="context" id="RuleDownloadStringDecry" placeholder="这里输出解密后的数据"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<svg class="button">
+				<text x="50%" y="55%">⋙+加密+⋙</text>
+				<rect id="encry"></rect>
+			</svg>
+			<svg class="button">
+				<text x="50%" y="55%">⋘-解密-⋘</text>
+				<rect id="decry"></rect>
+			</svg>
+			<br/>
+			<svg class="button">
+				<text x="50%" y="55%">⇊拉取站源</text>
+				<rect id="pull"></rect>
+			</svg>
+			<svg class="button">
+				<text x="50%" y="55%">⇈推送站源</text>
+				<rect id="push"></rect>
+			</svg>
+			<br/>
+			<svg class="button">
+				<text x="50%" y="55%">✗清空表单</text>
+				<rect id="initial"></rect>
+			</svg>
+			</svg>
+		</div>
+		<div class="outbox">
+			<div class="tabbox">
+				<div class="tabtitle">
+					<div name="首页" class="tab1 this">首页</div>
+					<div name="详情" class="tab2">详情</div>
+					<div name="分类" class="tab3">分类</div>
+					<div name="直播" class="tab4">直播</div>
+					<div name="下载" class="tab5">下载</div>
+					<div name="帮助信息" class="tab6">帮助信息</div>
+				</div>
+				<div class="tabbody">
+					<div class="tab1 this">
+						<textarea class="context" id="RuleIndexStringEncry" placeholder="这里输出加密后的数据"></textarea>
+					</div>
+					<div class="tab2">
+						<textarea class="context" id="RuleSeasonStringEncry" placeholder="这里输出加密后的数据"></textarea>
+					</div>
+					<div class="tab3">
+						<textarea class="context" id="RuleCategoryStringEncry" placeholder="这里输出加密后的数据"></textarea>
+					</div>
+					<div class="tab4">
+						<textarea class="context" id="RuleLiveStringEncry" placeholder="这里输出加密后的数据"></textarea>
+					</div>
+					<div class="tab5">
+						<textarea class="context" id="RuleDownloadStringEncry" placeholder="这里输出加密后的数据"></textarea>
+					</div>
+					<div class="tab6">
+						<div class="context link">
+							<a target="_blank" href="https://gedoor.github.io/MyBookshelf/sourcerule.html">阅读书源教程</a>
+							<a target="_blank" href="https://zhuanlan.zhihu.com/p/29436838">Xpath基础教程</a>
+							<a target="_blank" href="https://zhuanlan.zhihu.com/p/32187820">Xpath高级教程</a>
+							<a target="_blank" href="https://blog.csdn.net/koflance/article/details/63262484">JsonPath教程</a>
+							<a target="_blank" href="https://blog.csdn.net/wangjunjun2008/article/details/50513528">Jsoup的选择器Ch</a>
+							<a target="_blank" href="https://jsoup.org/cookbook/extracting-data/selector-syntax">Jsoup的选择器En</a>
+							<a target="_blank" href="https://www.w3cschool.cn/regex_rmjc/?">正则表达式教程</a>
+							<a target="_blank" href="http://tool.chinaz.com/regex">正则表达式在线验证工具</a>
+							<br/>
+							<div>^$()[]{}.?+*| 这些是Java正则特殊符号,匹配需转义
+								<br>(?s) 前缀表示跨行解析
+								<br>(?m) 前缀表示逐行匹配
+								<br>(?i) 前缀表示忽略大小写
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

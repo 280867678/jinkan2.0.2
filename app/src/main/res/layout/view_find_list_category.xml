@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/llyt_rv_category" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginLeft="8dp" android:layout_marginRight="8dp">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_form" android:paddingLeft="7dp" android:paddingTop="3dp" android:paddingRight="7dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_type" android:paddingLeft="7dp" android:paddingTop="3dp" android:paddingRight="7dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_area" android:paddingLeft="7dp" android:paddingTop="3dp" android:paddingRight="7dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_year" android:paddingLeft="7dp" android:paddingTop="3dp" android:paddingRight="7dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_sort" android:paddingLeft="7dp" android:paddingTop="3dp" android:paddingRight="7dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="7dp"/>
+</LinearLayout>

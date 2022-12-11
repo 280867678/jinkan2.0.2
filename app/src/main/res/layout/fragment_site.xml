@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rlyt_view_pager" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/iv_sort" android:padding="10dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="6dp" android:src="@drawable/ic_find_change" android:layout_alignParentRight="true"/>
+        <com.androidkun.xtablayout.XTabLayout android:id="@+id/tablayout" android:paddingLeft="10dp" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="5dp" android:layout_toLeftOf="@+id/iv_sort" app:xTabDividerWidthWidthText="false" app:xTabIndicatorColor="@color/colorPrimary" app:xTabIndicatorHeight="2dp" app:xTabIndicatorWidth="20dp" app:xTabMode="0x0" app:xTabSelectedTextColor="@color/colorPrimary" app:xTabSelectedTextSize="14sp" app:xTabTextColor="@color/text_gray2" app:xTabTextSize="13sp"/>
+        <View android:id="@+id/view_line_tab" android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_below="@+id/tablayout"/>
+        <androidx.viewpager.widget.ViewPager android:id="@+id/viewpager" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/view_line_tab"/>
+    </RelativeLayout>
+    <ProgressBar android:id="@+id/pb_websource" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_empty" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_width="110dp" android:layout_height="110dp" android:src="@drawable/bg_load_empty"/>
+        <TextView android:textSize="13sp" android:textColor="@color/gray" android:id="@+id/tv_retry" android:paddingTop="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="未配置网页规则"/>
+        <TextView android:textSize="13sp" android:textColor="@color/gray" android:id="@+id/tv_retry2" android:paddingTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点我添加 + "/>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/fab_add" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/fab_margin" android:layout_marginBottom="25dp" android:src="@drawable/ic_add_white" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" app:backgroundTint="@color/colorPrimary" app:fabSize="1"/>
+</RelativeLayout>

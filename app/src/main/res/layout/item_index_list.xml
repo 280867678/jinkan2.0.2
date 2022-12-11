@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingTop="5dp" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:paddingLeft="10dp" android:paddingTop="5dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/iv_icon" android:background="@drawable/ic_home_mark_2" android:layout_width="19dp" android:layout_height="19dp"/>
+        <TextView android:textSize="14sp" android:textColor="@color/black" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="类型"/>
+        <TextView android:textSize="12sp" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_web_name" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:text="类型" android:layout_weight="1" android:fontFamily="sans-serif-condensed"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_content" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <View android:id="@+id/view_line" android:visibility="gone" android:layout_width="match_parent" android:layout_height="10dp"/>
+</LinearLayout>

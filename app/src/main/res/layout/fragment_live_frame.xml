@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/background" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center_vertical" android:id="@+id/rlyt_top_bar" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginLeft="3dp" android:layout_marginRight="4dp">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_type" android:paddingLeft="7dp" android:paddingTop="3dp" android:paddingRight="7dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <me.tvspark.widget.selectionLayout.SelectionLayout android:id="@+id/slOverall" android:layout_width="wrap_content" android:layout_height="45dp" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/viewpager" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/rlyt_top_bar"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_error" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:background="@drawable/bg_load_empty" android:layout_width="95dp" android:layout_height="95dp"/>
+        <TextView android:textSize="14sp" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="网页解析失败"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp">
+            <TextView android:textSize="14sp" android:textColor="@color/white" android:id="@+id/tv_retry" android:background="@drawable/bg_empty_circle_color" android:paddingLeft="20dp" android:paddingTop="8dp" android:paddingRight="20dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点我重试"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar android:id="@+id/pb_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+</RelativeLayout>

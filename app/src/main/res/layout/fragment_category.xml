@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/top" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/tool_bar_height" android:elevation="0dp" app:elevation="0dp">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="19sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="分类" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/iv_search" android:padding="13dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_search_gray" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/iv_action_cast" android:paddingLeft="15dp" android:paddingTop="16dp" android:paddingRight="15dp" android:paddingBottom="15dp" android:layout_width="50dp" android:layout_height="match_parent" android:src="@drawable/ic_menu_cast" android:layout_toLeftOf="@+id/iv_search" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/refresh_layout" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <RelativeLayout android:id="@+id/rlyt_sticky_header_view" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include layout="@layout/view_find_list_category"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/llyt_category_summary" android:background="@color/white" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/tv_category" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="40dp" android:text="分类·分类·分类"/>
+                <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <include android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="155dp" layout="@layout/ing_retry"/>
+    </RelativeLayout>
+</LinearLayout>

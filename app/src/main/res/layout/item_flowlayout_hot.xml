@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llyt_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:textSize="14sp" android:textColor="#999999" android:gravity="center" android:id="@+id/tv_name" android:background="@drawable/search_hotwords_bg" android:paddingLeft="14dp" android:paddingRight="14dp" android:layout_width="wrap_content" android:layout_height="30dp" android:text="测试"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="white.whale" platformBuildVersionCode="28" platformBuildVersionName="9" android:versionCode="302" android:versionName="2.0.2" android:compileSdkVersion="28" android:compileSdkVersionCodename="9">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="np.manager.FuckSign" android:allowBackup="true" android:hardwareAccelerated="true" android:supportsRtl="true" android:usesCleartextTraffic="true" android:networkSecurityConfig="@xml/network_security_config" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data android:name="android.max_aspect" android:value="2.1"/>
+        <meta-data android:name="ScopedStorage" android:value="true"/>
+        <activity android:theme="@style/SplashTheme" android:label="@string/app_name" android:name="me.tvspark.view.activity.SplashActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/app_name" android:name="me.tvspark.view.activity.HomeActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar_TransparentStatusBar" android:name="me.tvspark.view.activity.DetailActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.WebSnifferActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.WebviewAgentActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.WebviewX5Activity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.KSYPlayerActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:theme="@style/AppTheme_Start" android:name="me.tvspark.view.activity.GActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.SearchActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.CollectActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.utils.cast.p050ui.CastPlayActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.ConfActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@android:style/Theme.Translucent" android:name="com.tencent.bugly.beta.p041ui.BetaActivity" android:configChanges="screenSize|orientation|keyboardHidden|locale"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.HistoryActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.AboutActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.SettingActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.AllDownParentActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.AllDownChildActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.DowningActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.RecIndexMoreActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar_TransparentStatusBar" android:name="me.tvspark.view.activity.RankListActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.SortWebsiteActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.DelWebsiteActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.WebsiteActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.LocalPlayerActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.EditHomeMarkActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="me.tvspark.view.activity.EditWebActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:name="me.tvspark.view.activity.TbsPlayerActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="landscape" android:configChanges="screenSize|orientation|keyboardHidden" android:alwaysRetainTaskState="true" android:hardwareAccelerated="true">
+            <intent-filter>
+                <action android:name="com.tencent.smtt.tbs.video.PLAY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="white.whale.fileProvider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <service android:name="me.tvspark.utils.service.FloatPlayService"/>
+        <service android:name="me.tvspark.utils.web.WebService"/>
+        <service android:label="DLNA服务" android:name="org.fourthline.cling.android.AndroidUpnpServiceImpl"/>
+        <service android:name="me.tvspark.utils.cast.service.ClingService" android:exported="false"/>
+        <service android:name="me.tvspark.utils.cast.service.SystemService" android:exported="false"/>
+        <service android:label="dexopt" android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService" android:process=":dexopt"/>
+        <service android:name="me.tvspark.utils.service.ADownService"/>
+        <provider android:name="com.p038qq.p039e.comm.GDTFileProvider" android:exported="false" android:authorities="white.whale.gdt.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/gdt_file_path"/>
+        </provider>
+        <activity android:theme="@style/ExFilePickerThemeLight" android:name="ru.bartwell.exfilepicker.p062ui.activity.ExFilePickerActivity"/>
+        <service android:name="com.p038qq.p039e.comm.DownloadService" android:exported="false" android:multiprocess="true"/>
+        <activity android:name="com.p038qq.p039e.ads.ADActivity" android:multiprocess="true" android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@android:style/Theme.Light.NoTitleBar" android:name="com.p038qq.p039e.ads.PortraitADActivity" android:multiprocess="true" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@android:style/Theme.Light.NoTitleBar" android:name="com.p038qq.p039e.ads.LandscapeADActivity" android:multiprocess="true" android:screenOrientation="sensorLandscape" android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity android:theme="@android:style/Theme.Light.NoTitleBar" android:name="com.p038qq.p039e.ads.RewardvideoPortraitADActivity" android:multiprocess="true" android:configChanges="screenSize|orientation|keyboardHidden|keyboard">
+            <meta-data android:name="android.notch_support" android:value="true"/>
+        </activity>
+        <activity android:theme="@android:style/Theme.Light.NoTitleBar" android:name="com.p038qq.p039e.ads.RewardvideoLandscapeADActivity" android:multiprocess="true" android:screenOrientation="landscape" android:configChanges="screenSize|orientation|keyboardHidden|keyboard">
+            <meta-data android:name="android.notch_support" android:value="true"/>
+        </activity>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:name="com.p038qq.p039e.ads.DialogActivity" android:multiprocess="true"/>
+        <activity android:name="com.tencent.bugly.beta.p041ui.BetaActiveAlertActivity"/>
+        <provider android:name="com.tencent.bugly.beta.utils.BuglyFileProvider" android:exported="false" android:authorities="white.whale.fileProvider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <service android:name="com.tencent.bugly.beta.tinker.TinkerResultService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <provider android:name="com.just.agentweb.AgentWebFileProvider" android:exported="false" android:authorities="white.whale.AgentWebFileProvider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/web_files_public"/>
+        </provider>
+        <activity android:theme="@style/actionActivity" android:name="com.just.agentweb.AgentActionFragment" android:exported="false" android:launchMode="standard" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="white.whale.lifecycle-process"/>
+    </application>
+</manifest>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/refresh_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llyt_error" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:background="@drawable/bg_load_empty" android:layout_width="95dp" android:layout_height="95dp"/>
+        <TextView android:textSize="13sp" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="解析失败 请切换网站"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp">
+            <TextView android:textSize="14sp" android:textColor="@color/colorPrimary" android:id="@+id/tv_go_origin_web" android:background="@drawable/bg_empty_circle" android:paddingLeft="20dp" android:paddingTop="8dp" android:paddingRight="20dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="去原网页"/>
+            <TextView android:textSize="14sp" android:textColor="@color/colorPrimary" android:id="@+id/tv_retry" android:background="@drawable/bg_empty_circle" android:paddingLeft="20dp" android:paddingTop="8dp" android:paddingRight="20dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="点我重试"/>
+        </LinearLayout>
+        <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/tv_change_web" android:background="@drawable/bg_empty_circle_color" android:paddingLeft="30dp" android:paddingTop="10dp" android:paddingRight="30dp" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="切 换 显 示 网 站"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/llyt_web_search" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="50dp">
+            <ImageView android:id="@+id/iv_web_back" android:padding="15dp" android:layout_width="50dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:src="@drawable/ic_web_back_gray"/>
+            <ImageView android:id="@+id/iv_web_forward" android:padding="15dp" android:layout_width="50dp" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:src="@drawable/ic_web_forward_gray" android:layout_toRightOf="@+id/iv_web_back"/>
+            <TextView android:textSize="13sp" android:textColor="@color/red" android:gravity="center" android:id="@+id/tv_info" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="15dp" android:text="[ 使用说明 ]" android:layout_alignParentRight="true"/>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llyt_web_go_detail" android:background="@drawable/web_go_detail_circle" android:paddingLeft="8dp" android:paddingRight="8dp" android:clickable="true" android:layout_width="wrap_content" android:layout_height="26dp" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/tv_info" android:layout_centerVertical="true">
+                <ImageView android:id="@+id/iv_web_go_detail" android:layout_width="25dp" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:src="@drawable/switch_close"/>
+                <TextView android:textSize="13sp" android:textColor="@color/text_black" android:id="@+id/tv_web_go_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="跳转解析关" android:layout_centerVertical="true"/>
+            </LinearLayout>
+            <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipe_refresh_web" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:id="@+id/llyt_root" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</RelativeLayout>

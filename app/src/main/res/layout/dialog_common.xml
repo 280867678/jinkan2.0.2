@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/bg_corner_white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+    <LinearLayout android:orientation="vertical" android:id="@+id/llyt_content" android:layout_width="match_parent" android:layout_height="180dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <TextView android:textSize="20sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="17dp" android:text="对话框标题" android:maxLines="1"/>
+            <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16dp">
+                <TextView android:textSize="13sp" android:textColor="@color/text_black" android:ellipsize="end" android:gravity="center" android:id="@+id/tv_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="21dp" android:layout_marginRight="21dp" android:text="对话框文字" android:maxLines="2" android:lineSpacingMultiplier="1.2"/>
+            </ScrollView>
+        </LinearLayout>
+        <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="45dp" android:layout_alignParentBottom="true">
+            <TextView android:textSize="16sp" android:textColor="@color/text_black2" android:gravity="center" android:id="@+id/tv_cancel" android:layout_width="0dp" android:layout_height="match_parent" android:text="取消" android:layout_weight="1"/>
+            <View android:background="@color/line_color" android:layout_width="1dp" android:layout_height="match_parent"/>
+            <TextView android:textSize="16sp" android:textColor="@color/colorPrimary" android:gravity="center" android:id="@+id/tv_ok" android:layout_width="0dp" android:layout_height="match_parent" android:text="确定" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="?android:attr/selectableItemBackground" app:cardCornerRadius="0dp" app:cardElevation="0dp">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+        <me.tvspark.widget.RoundImageView android:id="@+id/iv_gallery" android:layout_width="match_parent" android:layout_height="125dp" android:scaleType="centerCrop"/>
+        <TextView android:textSize="12sp" android:textColor="@color/black" android:ellipsize="end" android:id="@+id/tv_title" android:paddingLeft="2dp" android:paddingTop="5dp" android:paddingRight="2dp" android:paddingBottom="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="清新养眼，妹子是也" android:maxLines="1" android:layout_below="@+id/iv_gallery"/>
+        <TextView android:textSize="10sp" android:textColor="@color/text_gray" android:ellipsize="end" android:id="@+id/tv_actor" android:paddingLeft="2dp" android:paddingRight="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="清新养眼，妹子是也" android:maxLines="1" android:layout_below="@+id/tv_title"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

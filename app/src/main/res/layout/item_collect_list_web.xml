@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:paddingTop="10dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/iv_icon" android:background="@drawable/ic_web_collect_ico" android:layout_width="15dp" android:layout_height="15dp" android:layout_marginTop="5dp"/>
+        <TextView android:textSize="15sp" android:textColor="@color/text_black" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="清新养眼" android:lines="1" android:layout_toRightOf="@+id/iv_icon" android:lineSpacingMultiplier="1.2"/>
+        <TextView android:textSize="10sp" android:textColor="@color/text_gray" android:ellipsize="end" android:id="@+id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="" android:lines="1" android:layout_below="@+id/tv_title" android:layout_alignParentRight="true"/>
+        <TextView android:textSize="10sp" android:textColor="@color/text_gray" android:ellipsize="end" android:id="@+id/tv_url" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="15dp" android:text="2020" android:lines="1" android:layout_toLeftOf="@+id/tv_time" android:layout_below="@+id/tv_title" android:layout_alignLeft="@+id/tv_title"/>
+    </RelativeLayout>
+    <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp"/>
+</LinearLayout>

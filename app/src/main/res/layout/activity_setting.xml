@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/rlyt_top_bar" android:layout_width="match_parent" android:layout_height="45dp">
+        <ImageView android:id="@+id/iv_top_back" android:padding="11dp" android:visibility="visible" android:layout_width="45dp" android:layout_height="45dp" android:layout_marginLeft="2dp" android:src="@drawable/ic_toolbar_back_black"/>
+        <TextView android:textSize="17sp" android:textColor="@color/text_black" android:gravity="center" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:text="标题" android:layout_toRightOf="@+id/iv_top_back"/>
+        <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <TextView android:textSize="12sp" android:textColor="@color/color_ff_66_66_66" android:gravity="center_vertical" android:background="@color/color_ff_f3_f3_f3" android:paddingLeft="20dp" android:paddingTop="8dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="播放器内核"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llyt_x5" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp">
+                <TextView android:textColor="@color/color_ff_22_22_22" android:layout_width="0dp" android:layout_height="wrap_content" android:text="X5播放器内核调试" android:layout_weight="1"/>
+                <TextView android:textSize="13sp" android:textColor="@color/color_9799a2" android:id="@+id/tv_x5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="手动初始化"/>
+                <ImageView android:layout_width="13dp" android:layout_height="13dp" app:srcCompat="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+            <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llyt_ksy" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp">
+                <TextView android:textColor="@color/color_ff_22_22_22" android:layout_width="0dp" android:layout_height="wrap_content" android:text="KSY播放器内核选择" android:layout_weight="1"/>
+                <TextView android:textSize="13sp" android:textColor="@color/color_9799a2" android:id="@+id/tv_ksy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Android内核"/>
+                <ImageView android:layout_width="13dp" android:layout_height="13dp" app:srcCompat="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="@color/color_ff_66_66_66" android:gravity="center_vertical" android:background="@color/color_ff_f3_f3_f3" android:paddingLeft="20dp" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="配置相关"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llyt_default_rate" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp">
+                <TextView android:textColor="@color/color_ff_22_22_22" android:layout_width="0dp" android:layout_height="wrap_content" android:text="KSY播放器默认倍速" android:layout_weight="1"/>
+                <TextView android:textSize="13sp" android:textColor="@color/color_9799a2" android:id="@+id/tv_default_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="x1.00"/>
+                <ImageView android:layout_width="13dp" android:layout_height="13dp" app:srcCompat="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+            <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp">
+                <TextView android:textColor="@color/color_ff_22_22_22" android:layout_width="0dp" android:layout_height="wrap_content" android:text="历史记录无痕模式" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cbox_no_history" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="@color/color_ff_66_66_66" android:gravity="center_vertical" android:background="@color/color_ff_f3_f3_f3" android:paddingLeft="20dp" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="播放相关"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llyt_auto_play" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp">
+                <TextView android:textColor="@color/color_ff_22_22_22" android:layout_width="0dp" android:layout_height="wrap_content" android:text="进入详情页自动播放" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cbox_auto_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+            </LinearLayout>
+            <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llyt_skip_time" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp">
+                <TextView android:textColor="@color/color_ff_22_22_22" android:layout_width="0dp" android:layout_height="wrap_content" android:text="跳过片头片尾时间" android:layout_weight="1"/>
+                <ImageView android:layout_width="13dp" android:layout_height="13dp" app:srcCompat="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+            <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llyt_ksy_progress" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp">
+                <TextView android:textColor="@color/color_ff_22_22_22" android:layout_width="0dp" android:layout_height="wrap_content" android:text="KSY播放器隐藏底部进度条" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cbox_ksy_progress" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llyt_play_next_auto" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp">
+                <TextView android:textColor="@color/color_ff_22_22_22" android:layout_width="0dp" android:layout_height="wrap_content" android:text="KSY播放器自动播放下一集" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cbox_play_next_auto" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="@color/color_ff_66_66_66" android:gravity="center_vertical" android:background="@color/color_ff_f3_f3_f3" android:paddingLeft="20dp" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="缓存相关"/>
+            <RelativeLayout android:id="@+id/rlyt_default_path" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="65dp">
+                <ImageView android:id="@+id/iv_arrow" android:layout_width="13dp" android:layout_height="13dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:srcCompat="@drawable/ic_arrow_right"/>
+                <TextView android:textSize="15sp" android:textColor="@color/color_ff_22_22_22" android:id="@+id/tv_def" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="默认下载根目录"/>
+                <TextView android:textSize="10sp" android:textColor="@color/color_9799a2" android:ellipsize="middle" android:id="@+id/tv_default_path" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="20dp" android:text="/storage/sd/" android:singleLine="true" android:layout_toLeftOf="@+id/iv_arrow" android:layout_below="@+id/tv_def" android:layout_alignLeft="@+id/tv_def"/>
+            </RelativeLayout>
+            <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llyt_trash" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp">
+                <TextView android:textColor="@color/color_ff_22_22_22" android:layout_width="0dp" android:layout_height="wrap_content" android:text="清理缓存垃圾" android:layout_weight="1"/>
+                <TextView android:textSize="13sp" android:textColor="@color/color_9799a2" android:id="@+id/tv_trash" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="0KB"/>
+                <ImageView android:layout_width="13dp" android:layout_height="13dp" app:srcCompat="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+            <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.8dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

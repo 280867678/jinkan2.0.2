@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/frameLayout" android:background="@color/background" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rlyt_action_bar" android:layout_width="match_parent" android:layout_height="@dimen/tool_bar_height">
+        <ImageView android:id="@+id/iv_back" android:padding="13dp" android:clickable="true" android:layout_width="50dp" android:layout_height="match_parent" android:layout_marginLeft="3dp" android:src="@drawable/ic_toolbar_back_black"/>
+        <TextView android:textSize="19sp" android:textColor="@color/text_black" android:ellipsize="end" android:id="@+id/tv_toolbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="酷站编辑" android:maxLines="1" android:layout_toRightOf="@+id/iv_back" android:layout_centerVertical="true"/>
+        <TextView android:textSize="15sp" android:textColor="@color/text_black" android:gravity="center" android:id="@+id/tv_more" android:layout_width="68dp" android:layout_height="match_parent" android:text="更多" android:layout_alignParentRight="true"/>
+        <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <TextView android:textSize="12sp" android:textColor="@color/red" android:paddingLeft="13dp" android:paddingTop="10dp" android:paddingRight="13dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="※ 点击标题跳转站源，长按标题更多选项"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+    <FrameLayout android:id="@+id/flyt_banner" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="0.1dp"/>
+</LinearLayout>

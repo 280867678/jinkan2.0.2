@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llyt_bg" android:background="@drawable/bg_channel_frame_nor" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="13sp" android:textColor="@color/text_black" android:id="@+id/tv_chanel" android:paddingLeft="10dp" android:paddingTop="4dp" android:paddingRight="10dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="备用1"/>
+    </LinearLayout>
+</LinearLayout>

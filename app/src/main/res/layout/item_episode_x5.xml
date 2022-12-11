@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="13sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@+id/tv_episode" android:background="@drawable/bg_episode_frame_nor_x5" android:paddingLeft="9dp" android:paddingRight="9dp" android:layout_width="match_parent" android:layout_height="35dp" android:minWidth="75dp" android:text="第22集" android:maxLines="1"/>
+</LinearLayout>

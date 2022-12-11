@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <me.tvspark.widget.RoundImageView android:id="@+id/iv_gallery" android:layout_width="55dp" android:layout_height="70dp" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+        <TextView android:textSize="17sp" android:textColor="@color/black" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="5dp" android:text="清新养眼" android:maxLines="1" android:layout_toRightOf="@+id/iv_gallery"/>
+        <TextView android:textSize="9sp" android:textColor="@color/text_gray" android:id="@+id/tv_type" android:paddingTop="2dp" android:paddingBottom="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="电视剧" android:layout_below="@+id/tv_title" android:layout_alignLeft="@+id/tv_title"/>
+        <TextView android:textSize="9sp" android:textColor="@color/colorPrimary" android:ellipsize="end" android:id="@+id/tv_last_episode" android:paddingRight="10dp" android:paddingBottom="3dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="上次观看到：1" android:maxLines="1" android:layout_alignLeft="@+id/tv_title" android:layout_alignBottom="@+id/iv_gallery"/>
+    </RelativeLayout>
+    <View android:background="@color/line_color" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="70dp"/>
+</LinearLayout>
